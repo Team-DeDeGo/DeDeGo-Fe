@@ -145,11 +145,6 @@ export const iconButton = style({
   border: "none",
   backgroundColor: "transparent",
   cursor: "pointer",
-  opacity: 0.6,
-  transition: "opacity 0.3s",
-  ":hover": {
-    opacity: 1,
-  },
 });
 
 export const icon = style({

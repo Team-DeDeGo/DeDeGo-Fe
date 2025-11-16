@@ -9,7 +9,7 @@ export default function Home() {
       <header className={styles.header}>
         <div className={styles.wrapper}>
           <div className={styles.leftSection}>
-            <Image src="/logo.png" alt="Dedego Logo" width={120} height={40} />
+            <Image src="/logo.png" alt="Dedego Logo" width={120} height={30} />
             <div className={styles.divider}>|</div>
             <h1 className={styles.title}>판교어 번역기</h1>
           </div>

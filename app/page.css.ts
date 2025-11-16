@@ -16,7 +16,7 @@ export const header = style({
 });
 
 export const wrapper = style({
-  height: "74px",
+  height: "54px",
   margin: "0 auto",
   padding: "0 32px",
   display: "flex",
@@ -51,6 +51,7 @@ export const about = style({
   fontWeight: "600",
   color: "#333333",
   cursor: "pointer",
+  textDecoration: "none",
 });
 
 export const main = style({

@@ -127,6 +127,11 @@ export const translateButton = style({
   ":active": {
     backgroundColor: "#6AB825",
   },
+  ":disabled": {
+    backgroundColor: "#E0E0E0",
+    cursor: "not-allowed",
+    color: "#999",
+  },
 });
 
 export const iconButtons = style({
@@ -145,10 +150,76 @@ export const iconButton = style({
   border: "none",
   backgroundColor: "transparent",
   cursor: "pointer",
+  transition: "opacity 0.2s",
+  ":hover": {
+    opacity: 0.7,
+  },
+  ":disabled": {
+    opacity: 0.3,
+    cursor: "not-allowed",
+  },
 });
 
 export const icon = style({
   width: "100%",
   height: "100%",
   objectFit: "contain",
+});
+
+// 용어 설명 섹션 스타일
+export const termsSection = style({
+  padding: "24px 30px",
+  backgroundColor: "#F9FAFB",
+  borderTop: `2px solid ${theme.gray}`,
+});
+
+export const termsTitle = style({
+  fontSize: "18px",
+  fontWeight: "600",
+  marginBottom: "16px",
+  color: "#333",
+});
+
+export const termsList = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: "12px",
+});
+
+export const termItem = style({
+  padding: "16px",
+  backgroundColor: "#FFFFFF",
+  borderRadius: "8px",
+  border: "1px solid #E5E7EB",
+  transition: "box-shadow 0.2s",
+  ":hover": {
+    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)",
+  },
+});
+
+export const termHeader = style({
+  display: "flex",
+  alignItems: "center",
+  gap: "8px",
+  marginBottom: "8px",
+});
+
+export const termWord = style({
+  fontSize: "16px",
+  fontWeight: "600",
+  color: theme.primary,
+});
+
+export const termOriginal = style({
+  fontSize: "14px",
+  color: "#6B7280",
+  fontStyle: "italic",
+  fontWeight: "500",
+});
+
+export const termMeaning = style({
+  fontSize: "14px",
+  color: "#4B5563",
+  lineHeight: "1.6",
+  margin: 0,
 });

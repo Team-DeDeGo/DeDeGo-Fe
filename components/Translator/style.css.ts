@@ -10,6 +10,17 @@ const FadeInOut = keyframes({
   },
 });
 
+const slideUp = keyframes({
+  from: {
+    opacity: 0,
+    transform: "translateY(10px)",
+  },
+  to: {
+    opacity: 1,
+    transform: "translateY(0)",
+  },
+});
+
 export const container = style({
   width: "100%",
   height: "100%",
@@ -17,23 +28,27 @@ export const container = style({
   justifyContent: "center",
   alignItems: "center",
   backgroundColor: "#FFFFFF",
-  margin: "40px 0", 
-  padding: "40px",
+  padding: "74px 20px 20px 20px",
 });
 
 export const translatorBox = style({
   width: "100%",
   maxWidth: "1200px",
+  height: "calc(100vh - 114px)",
   backgroundColor: theme.background,
   border: `3px solid ${theme.primary}`,
   borderRadius: "16px",
   overflow: "hidden",
+  display: "flex",
+  flexDirection: "column",
 });
 
 export const mainContent = style({
   display: "grid",
   gridTemplateColumns: "1fr 1fr",
-  minHeight: "400px",
+  flex: 1,
+  minHeight: 0,
+  overflow: "hidden",
   "@media": {
     [`screen and (max-width: ${screen.tablet})`]: {
       gridTemplateColumns: "1fr",
@@ -45,12 +60,16 @@ export const inputSection = style({
   display: "flex",
   flexDirection: "column",
   borderRight: `2px solid ${theme.gray}`,
+  minHeight: 0,
+  overflow: "hidden",
 });
 
 export const outputSection = style({
   display: "flex",
   flexDirection: "column",
   backgroundColor: "#FFFFFF",
+  minHeight: 0,
+  overflow: "hidden",
 });
 
 export const languageHeader = style({
@@ -58,6 +77,7 @@ export const languageHeader = style({
   borderBottom: `2px solid ${theme.gray}`,
   display: "flex",
   alignItems: "center",
+  flexShrink: 0,
 });
 
 export const languageLabel = style({
@@ -105,6 +125,8 @@ export const textArea = style({
   resize: "none",
   fontFamily: "inherit",
   padding: "30px",
+  minHeight: 0,
+  overflowY: "auto",
   "::placeholder": {
     color: "#AAAAAA",
   },
@@ -118,6 +140,8 @@ export const outputText = style({
   whiteSpace: "pre-wrap",
   wordBreak: "break-word",
   padding: "30px",
+  minHeight: 0,
+  overflowY: "auto",
 });
 
 export const loader = style({
@@ -159,10 +183,13 @@ export const footer = style({
   display: "flex",
   alignItems: "center",
   borderTop: `2px solid ${theme.gray}`,
+  flexShrink: 0,
+  height: "64px",
 });
 
 export const translateButton = style({
   width: "50%",
+  height: "100%",
   padding: "20px",
   backgroundColor: theme.primary,
   border: "none",
@@ -191,6 +218,7 @@ export const iconButtons = style({
   width: "50%",
   justifyContent: "flex-end",
   alignItems: "center",
+  height: "100%",
 });
 
 export const iconButton = style({
@@ -201,7 +229,7 @@ export const iconButton = style({
   backgroundColor: "transparent",
   cursor: "pointer",
   transition: "opacity 0.2s",
-  
+
   ":disabled": {
     opacity: 0.3,
     cursor: "not-allowed",
@@ -215,9 +243,12 @@ export const icon = style({
 });
 
 export const termsSection = style({
-  padding: "24px 20px",
+  maxHeight: "150px",
   backgroundColor: "#FFFFFF",
   borderTop: `2px solid ${theme.gray}`,
+  overflowY: "auto",
+  flexShrink: 0,
+  animation: `${slideUp} 0.3s ease-out`,
 });
 
 export const termsTitle = style({
@@ -231,15 +262,11 @@ export const termsList = style({
   display: "flex",
   flexDirection: "column",
   gap: "12px",
-  maxHeight: "200px",
-  overflowY: "auto",
-  paddingRight: "8px",
-  scrollbarWidth: "thin",
-  scrollbarColor: "#e0e0e0 transparent",
+  padding: "20px",
 });
 
 export const termItem = style({
-  padding: "16px",
+  padding: "12px",
   borderRadius: "8px",
 });
 

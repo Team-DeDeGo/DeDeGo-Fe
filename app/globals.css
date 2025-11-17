@@ -9,6 +9,13 @@
   --background: #ffffff;
   --foreground: #171717;
 
+  scrollbar-width: thin;
+  scrollbar-color: #e0e0e0 transparent;
+
+  ::-webkit-scrollbar {
+    display: "none"
+  }
+
   @media screen and (min-width: 1026px) and (max-width: 1440px) {
     font-size: 90%;
   }

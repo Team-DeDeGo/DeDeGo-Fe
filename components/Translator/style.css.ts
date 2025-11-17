@@ -34,7 +34,7 @@ export const container = style({
 export const translatorBox = style({
   width: "100%",
   maxWidth: "1200px",
-  height: "calc(100vh - 114px)",
+  height: "calc(100vh - 184px)",
   backgroundColor: theme.background,
   border: `3px solid ${theme.primary}`,
   borderRadius: "16px",

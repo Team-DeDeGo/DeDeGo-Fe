@@ -5,6 +5,24 @@ import Providers from "./providers";
 export const metadata: Metadata = {
   title: "DeDeGo",
   description: "개발 전문 용어가 어려운 당신에게 - 디디고",
+  openGraph: {
+    title: "DeDeGo",
+    description: "개발 전문 용어가 어려운 당신에게 - 디디고",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 200,
+        height: 200,
+        alt: "DeDeGo",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "DeDeGo",
+    description: "개발 전문 용어가 어려운 당신에게 - 디디고",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({

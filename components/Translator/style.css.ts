@@ -78,6 +78,7 @@ export const languageHeader = style({
   borderBottom: `2px solid ${theme.gray}`,
   display: "flex",
   alignItems: "center",
+  justifyContent: "space-between",
   flexShrink: 0,
 });
 
@@ -87,6 +88,34 @@ export const languageLabel = style({
   fontWeight: "500",
   color: "#333",
   lineHeight: 1.5,
+});
+
+export const switchButton = style({
+  padding: "8px",
+  marginRight: "20px",
+  backgroundColor: "transparent",
+  border: "none",
+  cursor: "pointer",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  transition: "opacity 0.2s, transform 0.2s",
+  ":hover": {
+    opacity: 0.7,
+  },
+  ":active": {
+    transform: "scale(0.95)",
+  },
+  ":disabled": {
+    opacity: 0.3,
+    cursor: "not-allowed",
+  },
+});
+
+export const switchIcon = style({
+  width: "24px",
+  height: "24px",
+  objectFit: "contain",
 });
 
 export const selectWrapper = style({

@@ -8,7 +8,7 @@ import { Toastify } from "../Toastify";
 
 const LoadingText = () => {
   const loadingMessages = [
-    "평균 6초정도 걸려요 ㅠㅠ 조금만 기다려주세요",
+    "평균 5초정도 걸려요 ㅠㅠ",
     "얼마 안남았어요!!",
     "번역이 생각보다 어렵네요..",
     "거의 다 됐어요!",
@@ -55,6 +55,12 @@ export default function Translator() {
 
   const oppositeLanguage = sourceLang === "판교어" ? "일반어" : "판교어";
 
+  const handleSwitchLanguage = () => {
+    if (!isPending) {
+      setSourceLang(sourceLang === "판교어" ? "일반어" : "판교어");
+    }
+  };
+
   const handleTranslate = () => {
     if (!inputText.trim()) {
       Toastify({ content: "번역할 내용을 입력해주세요!", type: "info" });
@@ -94,22 +100,19 @@ export default function Translator() {
         <div className={styles.mainContent}>
           <div className={styles.inputSection}>
             <div className={styles.languageHeader}>
-              <div className={styles.selectWrapper}>
-                <select
-                  className={styles.select}
-                  value={sourceLang}
-                  onChange={(e) => setSourceLang(e.target.value)}
-                  disabled={isPending}
-                >
-                  <option value="판교어">판교어</option>
-                  <option value="일반어">일반어</option>
-                </select>
+              <div className={styles.languageLabel}>{sourceLang}</div>
+              <button
+                className={styles.switchButton}
+                onClick={handleSwitchLanguage}
+                disabled={isPending}
+                aria-label="언어 전환"
+              >
                 <img
-                  src="/arrow.png"
-                  alt="arrow"
-                  className={styles.selectArrow}
+                  src="/switch.png"
+                  alt="언어 전환"
+                  className={styles.switchIcon}
                 />
-              </div>
+              </button>
             </div>
             <textarea
               className={styles.textArea}

@@ -4,10 +4,10 @@ import Providers from "./providers";
 
 export const metadata: Metadata = {
   title: "DeDeGo",
-  description: "개발 전문 용어가 어려운 당신에게 - 디디고",
+  description: "개발 전문 용어가 어려운 당신에게 - 데데고",
   openGraph: {
     title: "DeDeGo",
-    description: "개발 전문 용어가 어려운 당신에게 - 디디고",
+    description: "개발 전문 용어가 어려운 당신에게 - 데데고",
     images: [
       {
         url: "/og-image.png",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: "DeDeGo",
-    description: "개발 전문 용어가 어려운 당신에게 - 디디고",
+    description: "개발 전문 용어가 어려운 당신에게 - 데데고",
     images: ["/og-image.png"],
   },
 };

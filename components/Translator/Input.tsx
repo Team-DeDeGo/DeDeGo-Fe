@@ -2,6 +2,7 @@
 
 import * as styles from "./style.css";
 import type { LanguageType } from "@/types";
+import Image from "next/image";
 
 interface TranslatorInputProps {
   sourceLang: LanguageType;
@@ -28,11 +29,7 @@ export const TranslatorInput = ({
           disabled={isPending}
           aria-label="언어 전환"
         >
-          <img
-            src="/switch.png"
-            alt="언어 전환"
-            className={styles.switchIcon}
-          />
+          <Image src="/switch.png" alt="언어 전환" width={18} height={18} />
         </button>
       </div>
       <textarea

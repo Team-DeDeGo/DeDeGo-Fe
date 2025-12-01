@@ -1,6 +1,7 @@
 "use client";
 
 import * as styles from "./style.css";
+import Image from "next/image";
 
 interface TranslatorFooterProps {
   isPending: boolean;
@@ -31,7 +32,7 @@ export const TranslatorFooter = ({
           rel="noopener noreferrer"
           className={styles.iconButton}
         >
-          <img src="/github.png" alt="GitHub" className={styles.icon} />
+          <Image src="/github.png" alt="GitHub" width={25} height={25} />
         </a>
         <button
           className={styles.iconButton}
@@ -39,7 +40,7 @@ export const TranslatorFooter = ({
           disabled={isPending || !hasTranslation}
           aria-label="번역 결과 복사"
         >
-          <img src="/copy.png" alt="Copy" className={styles.icon} />
+          <Image src="/copy.png" alt="Copy" width={25} height={25} />
         </button>
       </div>
     </div>

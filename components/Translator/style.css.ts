@@ -109,12 +109,6 @@ export const switchButton = style({
   },
 });
 
-export const switchIcon = style({
-  width: "18px",
-  height: "18px",
-  objectFit: "contain",
-});
-
 export const selectWrapper = style({
   position: "relative",
   display: "inline-block",
@@ -262,8 +256,6 @@ export const iconButtons = style({
 });
 
 export const iconButton = style({
-  width: "40px",
-  height: "40px",
   padding: "8px",
   border: "none",
   backgroundColor: "transparent",
@@ -274,12 +266,6 @@ export const iconButton = style({
     opacity: 0.3,
     cursor: "not-allowed",
   },
-});
-
-export const icon = style({
-  width: "100%",
-  height: "100%",
-  objectFit: "contain",
 });
 
 export const termsSection = style({

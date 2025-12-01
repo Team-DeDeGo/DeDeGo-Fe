@@ -55,6 +55,10 @@ a {
   text-decoration: none;
 }
 
+image {
+  object-fit: contain;
+}
+
 .toastify .Toastify__toast {
   background-color: white;
   width: 100%;

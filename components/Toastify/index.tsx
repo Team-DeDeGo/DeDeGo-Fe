@@ -1,4 +1,4 @@
-import { Slide, toast, type ToastOptions } from "react-toastify";
+import { Bounce, Slide, toast, type ToastOptions } from "react-toastify";
 
 const defaultToastOptions: ToastOptions = {
   position: "top-center",

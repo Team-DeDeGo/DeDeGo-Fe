@@ -1,5 +1,5 @@
 import { style, keyframes } from "@vanilla-extract/css";
-import { theme } from "@/styles";
+import { theme, screen } from "@/styles";
 
 const slideUp = keyframes({
   from: {
@@ -21,7 +21,7 @@ export const termsSection = style({
   animation: `${slideUp} 0.3s ease-out`,
 
     "@media": {
-    [`screen and (max-width: 768px)`]: {
+    [`screen and (max-width: ${screen.phone})`]: {
       display: "none",
     },
   },

@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { theme } from "@/styles";
+import { theme, screen } from "@/styles";
 
 export const container = style({
   width: "100%",
@@ -31,7 +31,7 @@ export const mainContent = style({
   minHeight: 0,
   overflow: "hidden",
   "@media": {
-    [`screen and (max-width: 768px)`]: {
+    [`screen and (max-width: ${screen.phone})`]: {
       gridTemplateColumns: "1fr",
     },
   },

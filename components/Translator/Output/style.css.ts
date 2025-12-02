@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { theme } from "@/styles";
+import { theme, screen } from "@/styles";
 
 export const outputSection = style({
   display: "flex",
@@ -18,7 +18,7 @@ export const languageHeader = style({
   flexShrink: 0,
 
   "@media": {
-    [`screen and (max-width: 768px)`]: {
+    [`screen and (max-width: ${screen.phone})`]: {
       padding: "0",
     },
   },
@@ -32,7 +32,7 @@ export const languageLabel = style({
   lineHeight: 1.5,
 
   "@media": {
-    [`screen and (max-width: 768px)`]: {
+    [`screen and (max-width: ${screen.phone})`]: {
       display: "none",
     },
   },

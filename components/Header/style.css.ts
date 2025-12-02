@@ -30,6 +30,12 @@ export const divider = style({
   fontSize: "24px",
   fontWeight: "300",
   userSelect: "none",
+
+  "@media": {
+    [`screen and (max-width: ${screen.tablet})`]: {
+      display: "none",
+    },
+  },  
 });
 
 export const title = style({
@@ -38,6 +44,12 @@ export const title = style({
   color: "#333333",
   margin: 0,
   letterSpacing: "-0.5px",
+
+  "@media": {
+    [`screen and (max-width: ${screen.tablet})`]: {
+      display: "none",
+    },
+  },  
 });
 
 export const about = style({
@@ -47,10 +59,4 @@ export const about = style({
   color: "#333333",
   cursor: "pointer",
   textDecoration: "none",
-
-  "@media": {
-    [`screen and (max-width: ${screen.phone})`]: {
-      display: "none",
-    },
-  },  
 });

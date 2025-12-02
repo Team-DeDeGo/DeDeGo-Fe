@@ -20,12 +20,11 @@ const Providers = ({ children }: PropsWithChildren) => {
   return (
     <QueryClientProvider client={queryClient}>
       <ToastContainer
-        autoClose={3000}
+        autoClose={2000}
         hideProgressBar
         closeOnClick
         pauseOnHover
         closeButton={false}
-        limit={1}
         className="toastify"       
       />
       {children}
